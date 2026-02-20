@@ -1,0 +1,52 @@
+[user]
+    name = Ilan Iwumbwe
+    email = ikibfm@gmail.com
+[alias]
+    # STATUS & CHECKOUT
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    # Stage/Unstage/Commit shortcuts
+    a = add --all
+    unstage = reset HEAD --
+    ca = commit --amend --no-edit
+    
+    b = branch
+
+    # LOGGING AND HISTORY
+    # Powerful, concise, and colorful log history
+    # Usage: git l
+    l = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) -%C(bold red)%d%C(reset) %C(cyan)%s%C(reset) %C(bold green)(%an %ar)%C(reset)'
+    
+    # Shows the log history of the current branch only
+    # Usage: git lo
+    lo = log --oneline
+    
+    # Shows differences between the current branch and main/master
+    # Usage: git d
+    d = diff
+    
+    # SHOWING BRANCH DIVERGENCE
+    # Shows commits on the current branch that aren't on main/master, and vice-versa
+    # Usage: git bdiff
+    bdiff = log --oneline --left-right origin/main...HEAD 
+    
+    # INTERACTIVE REBASE
+    # Usage: git ri
+    ri = rebase --interactive
+    
+    # CLEANUP
+    # Deletes local branches already merged into current branch (and are gone from remote)
+    # Usage: git cleanup
+    cleanup = "!git branch --merged | grep -v '*' | grep -v 'main' | xargs -n 1 git branch -d"
+
+[core]
+    # Set default editor for commit messages, etc. (use 'vim' if you don't have nvim)
+    editor = vim
+[difftool "nbdime"]
+	cmd = nbdime diff --format=html \"$LOCAL\" \"$REMOTE\"
+[diff "ipynb"]
+	textconv = nbdime_textconv
+[merge]
+	tool = nbdime
