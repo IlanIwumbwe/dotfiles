@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/ilan/programming/QuteFuzz-FYP/src/ast/node'
-let g:netrw_dirhist_5='/home/ilan/programming/QuteFuzz-FYP/src/ast/node/special_nodes'
-let g:netrw_dirhist_4='/home/ilan/programming/QuteFuzz-FYP/src/ast/node'
-let g:netrw_dirhist_3='/home/ilan/programming/mase'
-let g:netrw_dirhist_2='/home/ilan/programming/mase/configs'
-let g:netrw_dirhist_1='/home/ilan/programming/mase'
