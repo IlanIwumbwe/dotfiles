@@ -124,6 +124,7 @@ export PATH="/usr/bin/llvm-config-20:$PATH"
 # uv
 #export PATH="/home/ilan/snap/code/218/.local/share/../bin:$PATH"
 
+export PATH="/home/ilan/.cargo/bin/:$PATH"
 
 # opencode
 export PATH=/home/ilan/.opencode/bin:$PATH
@@ -131,4 +132,7 @@ CUDAQ_INSTALL_PATH="/home/ilan/.cudaq"
 . "${CUDAQ_INSTALL_PATH}/set_env.sh"
 
 # CUDA-Q Environment Setup
+
+export EDITOR=nvim
+export VISUAL=nvim
 source /home/ilan/.cudaq/set_env.sh

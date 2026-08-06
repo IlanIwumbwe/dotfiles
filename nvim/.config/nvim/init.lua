@@ -28,5 +28,7 @@ vim.opt.splitbelow = true      -- horizontal splits open below
 
 require("lazy").setup("plugins")
 
-vim.keymap.set('n', '<C-n>', ':bnext<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', '<C-p>', ':bprevious<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<leader>n', ':bnext<CR>')
+vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
+vim.keymap.set('n', '<C-x>', ':bdelete<CR>', { desc = 'Delete buffer' })
+vim.keymap.set('n', '<Esc>', ':noh<CR><Esc>', { desc = 'No highlight' })
