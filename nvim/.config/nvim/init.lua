@@ -32,3 +32,12 @@ vim.keymap.set('n', '<leader>n', ':bnext<CR>')
 vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<C-x>', ':bdelete<CR>', { desc = 'Delete buffer' })
 vim.keymap.set('n', '<Esc>', ':noh<CR><Esc>', { desc = 'No highlight' })
+
+vim.api.nvim_set_hl(0, "LineNr", {
+  fg = "#ffff00",
+})
+
+vim.api.nvim_set_hl(0, "CursorLineNr", {
+  fg = "#ffd700",
+  bold = true,
+})
