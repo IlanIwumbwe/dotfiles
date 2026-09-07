@@ -21,7 +21,7 @@ fi
 git clone https://github.com/IlanIwumbwe/dotfiles.git ~/dotfiles
 
 # stow dotfiles to create symlinks 
-~/dotfiles
+cd ~/dotfiles
 stow */
 
 echo "Done! Restart your shell.
