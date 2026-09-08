@@ -56,4 +56,23 @@ return {
       vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
     end,
   },
+  {
+   "nvim-treesitter/nvim-treesitter",
+   branch = "main",
+   build = ":TSUpdate",
+   config = function()
+     local ts = require("nvim-treesitter")
+     local parsers = { "lua", "python", "cpp", "c", "rust", "vim", "vimdoc", "query", "markdown" }
+ 
+     ts.install(parsers)
+ 
+     vim.api.nvim_create_autocmd("FileType", {
+       pattern = parsers,
+       callback = function()
+         vim.treesitter.start()   -- <<< here
+       end,
+     })
+   end,
+ },
 }
+
