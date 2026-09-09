@@ -9,7 +9,8 @@ return {
     config = function()
       require("nvim-treesitter").setup({})
       require("nvim-treesitter").install({
-        "bash", "c", "cpp", "lua", "python", "rust",
+        "bash", "c", "cpp", "lua", "python", "rust", "verilog", "embedded_template",
+        "ruby", "html", "jinja", "jinja_inline",
         "vim", "vimdoc", "query", "markdown", "markdown_inline",
       })
 
