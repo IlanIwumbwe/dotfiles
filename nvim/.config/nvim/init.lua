@@ -25,6 +25,7 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.splitright = true      -- vertical splits open to the right
 vim.opt.splitbelow = true      -- horizontal splits open below
+vim.opt.foldlevel = 99
 
 require("lazy").setup("plugins")
 
