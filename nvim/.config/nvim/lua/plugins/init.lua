@@ -52,7 +52,18 @@ return {
     "nvim-tree/nvim-tree.lua",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("nvim-tree").setup({})
+      require("nvim-tree").setup({
+        renderer = {
+            full_name = true
+        },
+        view = {
+            width = {
+                min = 20,
+                max = 80,
+                padding = 2
+            }
+        }
+      })
       vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
     end,
   },
