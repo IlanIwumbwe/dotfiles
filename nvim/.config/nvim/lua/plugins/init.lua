@@ -39,16 +39,6 @@ return {
     end,
   },
 
-  -- A colorscheme so it doesn't look bare
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme("catppuccin-mocha")
-    end,
-  },
-
   -- File tree sidebar (optional, VSCode-explorer-like)
   {
     "nvim-tree/nvim-tree.lua",
