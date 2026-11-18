@@ -21,6 +21,7 @@ vim.keymap.set('n', '<leader>n', ':bnext<CR>')
 vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<C-x>', ':bdelete<CR>', { desc = 'Delete buffer' })
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', { desc = 'No highlight' })
+vim.keymap.set('t', '<C-q>', [[<C-\><C-n>]], {})
 
 -- Copy the unnamed register to tmux after yanking text.
 vim.keymap.set("n", "<leader>ty", function()
