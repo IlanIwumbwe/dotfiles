@@ -22,14 +22,6 @@ vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<C-x>', ':bdelete<CR>', { desc = 'Delete buffer' })
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', { desc = 'No highlight' })
 
-vim.keymap.set('n', '<leader>t', function()
-    vim.cmd.new()
-    -- Toggle terminal at the bottom
-    vim.cmd.term()
-    vim.cmd.wincmd('J')
-    vim.api.nvim_win_set_height(0, 15)
-end)
-
 -- Copy the unnamed register to tmux after yanking text.
 vim.keymap.set("n", "<leader>ty", function()
   local output = vim.fn.system({ "tmux", "load-buffer", "-" }, vim.fn.getreg('"'))
@@ -64,4 +56,4 @@ local function toggle_term()
   vim.cmd('startinsert')
 end
 
-vim.keymap.set({ 'n', 't' }, '<C-t>', toggle_term, { desc = 'Toggle terminal' })
+vim.keymap.set({ 'n', 't' }, '<C-\\>', toggle_term, { desc = 'Toggle terminal' })
